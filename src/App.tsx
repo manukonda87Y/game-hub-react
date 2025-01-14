@@ -1,9 +1,23 @@
-import { Button } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
 import "./App.css";
 function App() {
   return (
     <>
-      <Button>Click ME</Button>
+      <Grid
+        templateAreas={{ base: `"nav" "main"`, lg: `"nav nav" "aside main"` }}
+      >
+        <GridItem area="nav" bg="red">
+          nav
+        </GridItem>
+
+        <GridItem hideBelow="lg" area="aside" bg="green">
+          aside
+        </GridItem>
+
+        <GridItem area="main" bg="Yellow">
+          main
+        </GridItem>
+      </Grid>
     </>
   );
 }
